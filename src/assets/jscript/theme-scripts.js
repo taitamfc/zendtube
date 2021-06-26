@@ -87,32 +87,8 @@
 		});
 
 
-		// Video set layout
-		jQuery("a[href='#v-set-layout']").click(function(){
-			var element = jQuery(this);
-			element.addClass("active").siblings(".active").removeClass("active");
-			element.parent().parent().siblings(".panel-block").attr("class", "panel-block video-list").addClass(element.attr("rel"));
-			return false;
-		});
-
-
 		// Orange-Themes HTML5 Video Player
 
-		jQuery("#videofallback").each(function(){
-			jwplayer("videofallback").setup({
-				file: jQuery(this).siblings("source").attr("src"),
-				width: "100%",
-				aspectratio: "16:9"
-			});
-		});
-
-		jQuery(".jwvideo").each(function(){
-			jwplayer("jwvideo").setup({
-				file: jQuery(this).attr("rel"),
-				width: "100%",
-				aspectratio: "16:9"
-			});
-		});
 
 		jQuery(".otplayer").parent().addClass("showcontrols");
 
